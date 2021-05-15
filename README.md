@@ -1,2 +1,0 @@
-# Gym-responsive
-Gym-responsive

@@ -1,22 +1,13 @@
 /**
  * Create By : Mostafa Mohamed (Shdaow)
- * template-3
  * 
  */
 
-
-
- /* Start global Rulz*/
  $(function(){
-    
-   
-   // Stop ul on hover
-
-
    // shoow animate hero
-   $(function changeAnimationLeft(){
+   $(function animationHero(){
 
-      $('.pa-hero').each(function(){
+      $(".animate-hero").each(function(){
          $(this).animate({
             left:0
          },1000,function(){
@@ -24,48 +15,23 @@
                $(this).animate({
                   left:'-100%'
             }).fadeIn();
-            changeAnimationLeft();
+            animationHero();
             });
          });
       });
 
-   }())
+   }());
 
-   // navbar-big vixed 
-
+   // navbar-big fixed 
    $(window).scroll(function(){
-      if($(window).scrollTop() > $('header').height())
-      {
-         $('header .parent-nav-big .logo').css({width:'20%'});
-         $('header .parent-nav-big .nav-big').css({width:'80%'});
-         $('header .parent-nav-big').addClass('run-animation').removeClass('stop-animation');
+      if($(window).scrollTop() > $('header').height()){
+         $('header nav').addClass('run-animation').removeClass('stop-animation');
       }
-      else
-      {
-
-         $('header .parent-nav-big .nav-big').css({width:'70%'});
-         $('header .parent-nav-big').addClass('stop-animation').removeClass('run-animation');
-
+      else{
+         $('header nav').addClass('stop-animation').removeClass('run-animation');
       }
    });
 
-     // navbar-big vixed 
-
-     $(window).scroll(function(){
-      if($(window).scrollTop() > $('header').height())
-      {
-         $('header .parent-nav-small .logo img').css({marginTop:'4px'});
-         $('header .parent-nav-small .parent-list').css({top:'15px'});
-         $('header .parent-nav-small').addClass('run-animation').removeClass('stop-animation');
-      }
-      else
-      {
-         $('header .parent-nav-small .logo img').css({marginTop:'30px'});
-         $('header .parent-nav-small .parent-list').css({top:'30px'});
-         $('header .parent-nav-small').addClass('stop-animation').removeClass('run-animation');
-
-      }
-   });
 
 
 
